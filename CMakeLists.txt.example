@@ -1,0 +1,20 @@
+cmake_minimum_required(VERSION 3.28)
+project(qtWindow)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_PREFIX_PATH "path to qt mingw")
+
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTOUIC ON)
+set(CMAKE_AUTORCC ON)
+
+
+find_package(Qt6Widgets REQUIRED)
+
+add_executable(qtWindow WIN32
+        main.cpp
+        mainwindow.cpp
+        mainwindow.h
+)
+
+target_link_libraries(qtWindow Qt6::Widgets)
