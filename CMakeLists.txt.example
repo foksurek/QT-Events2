@@ -11,7 +11,14 @@ set(CMAKE_AUTORCC ON)
 
 find_package(Qt6Widgets REQUIRED)
 
-add_executable(qtWindow WIN32
+# use this to build without console
+#add_executable(qtWindow WIN32
+#    main.cpp
+#    mainwindow.cpp
+#    mainwindow.h
+#)
+
+add_executable(qtWindow
         main.cpp
         mainwindow.cpp
         mainwindow.h
